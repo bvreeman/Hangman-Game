@@ -1,3 +1,48 @@
 header h1 {
     color: red;
+    padding: 15px 15px 20px 15px;
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    font-variant: small-caps;
+    text-shadow: 2px 2px #646464
 }
+
+body { 
+    background-image: url(../images/table.jpeg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+.gameboard {
+    min-height: 100%;
+    border: solid;
+    border-width: 2px;
+    border-color: #000000;
+    text-align: center;
+    background-color: #d47c7c;
+    padding: 20px;
+}
+
+
+p {
+    text-align: center;
+}
+
+.btn-letter {
+    margin: 10px;
+}
+
+.btn-toolbar {
+    display: flex;
+    justify-content: center;
+    color: red;
+    padding-top: 10px;
+}
+
+.center-block {
+    clear: both;
+    float:none;
+  }
+

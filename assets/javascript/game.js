@@ -4,16 +4,16 @@ const wordBank = ["cat", "crocodile", "human", "fish"];
 
 const chosenWord = wordBank [Math.floor((Math.random()*wordBank.length))];
 
-alert(chosenWord);
+// alert(chosenWord);
 
 let chosenWordLength = chosenWord.length;
 
-alert(chosenWordLength);
+// alert(chosenWordLength);
 
 let dashWordLength = [];
 
-for(let dashCounter=0; dashCounter <= chosenWordLength.legth; dashCounter++); {
+for(let dashCounter=0; dashCounter <= chosenWordLength.length; dashCounter++); {
     dashWordLength.push('_');
 }
 
-alert(dashWordLength);
+// alert(dashWordLength);
