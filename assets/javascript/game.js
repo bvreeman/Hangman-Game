@@ -1,17 +1,19 @@
 'use strict';
 
-const fizzBuzz = function() {
-    for (let i = 1; i <= 100; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log('Fizzbuzz');
-        } else if (i % 3 === 0) {
-            console.log('Fizz');
-        } else if (i % 5 === 0) {
-            console.log('Buzz');
-        } else {
-            console.log(i);
-        }
-    }
-};
+const wordBank = ["cat", "crocodile", "human", "fish"];
 
-fizzBuzz();
+const chosenWord = wordBank [Math.floor((Math.random()*wordBank.length))];
+
+alert(chosenWord);
+
+let chosenWordLength = chosenWord.length;
+
+alert(chosenWordLength);
+
+let dashWordLength = [];
+
+for(let dashCounter=0; dashCounter <= chosenWordLength.legth; dashCounter++); {
+    dashWordLength.push('_');
+}
+
+alert(dashWordLength);
