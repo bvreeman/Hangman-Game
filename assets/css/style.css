@@ -25,6 +25,10 @@ body {
     padding: 20px;
 }
 
+.row main1 {
+    display: flex;
+    justify-content: space-between;
+}
 
 p {
     text-align: center;
@@ -43,8 +47,23 @@ p {
     color: darkcyan;
   }
 
-  #buttons {
-    padding-top: 60px;
+  #buttons1 {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  #buttons2 {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  #buttons3 {
+    display: flex;
+    justify-content: center;
+
   }
 
 /* .btn-letter {
