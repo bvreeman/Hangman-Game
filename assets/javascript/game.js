@@ -3,35 +3,29 @@
 const wordBank = ["cat", "crocodile", "human", "fish"];
 
 const chosenWord = wordBank [Math.floor((Math.random()*wordBank.length))];
-
-console.log(chosenWord);
-
-let chosenWordLength = chosenWord.length;
-
-console.log(chosenWordLength);
-
-let dashWordLength = [];
-
-for(let dashCounter=0; dashCounter < chosenWordLength; dashCounter++) {
-    dashWordLength.push('_');
-
-    console.log(dashWordLength);
-
+    let chosenWordLength = chosenWord.length;
+    let dashWordLength = [];
+    for(let dashCounter=0; dashCounter < chosenWordLength; dashCounter++) {
+        dashWordLength.push('_');
+    
+    $("#word").push(dashWordLength);
 
 
 };
 
-comments = function () {
-    guessesRemaining.innerHTML = "You have " + guesses + " remaining";
-    if (lives < 1) {
-      guessesRemaining.innerHTML = "Game Over";
-    }
-    for (let i = 0; i < geusses.length; i++) {
-      if (counter + space === geusses.length) {
-        guessesRemaining.innerHTML = "You Win!";
-      }
-    }
-  }
+// let answerArray = [];
+//     for (let i = 0; i < chosenWord.length;) {
+//         answerArray[i] = "_";
+//     }
+// let remainingLetters = wordBank.length;
+
+// while (remainingLetters > 0) {
+//     alert(answerArray.join(" "));
+// }
+
+// 
+
+
 const letters1 = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
 const letters2 = ["J", "K", "L", "M", "N", "O", "P", "Q", "R"];
 const letters3 = [ "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -42,6 +36,7 @@ for (let i = 0; i < letters1.length; i++) {
     letterBtn.attr("data-letter", letters1[i]);
     letterBtn.text(letters1[i]);
     $("#buttons1").append(letterBtn);
+    onclick= "visibility = hidden";
 
 };
 
@@ -63,10 +58,37 @@ for (let i = 0; i < letters3.length; i++) {
 
 };
 
-// function pictureChange()
-// {
-// document.getElementById('btn-letter').src=("./assets/images/paw_print.png");
+function setup() {
+    myGuesses = 10;
+    messages = {
+        win: 'You Win!',
+        lose: 'Game Over',
+
+    };
+
+}
+
+// let guessesRemaining ;
+// let showLives = document.getElementById("myGuesses");
+
+// comments = function () {
+//     guessesRemaining.innerHTML = "You have " + guesses + " remaining";
+//     if (lives < 1) {
+//       guessesRemaining.innerHTML = "Game Over";
+//     }
+//     for (let i = 0; i < geusses.length; i++) {
+//       if (counter + space === geusses.length) {
+//         guessesRemaining.innerHTML = "You Win!";
+//       }
+//     }
 // };
+    
+
+
+function pictureChange()
+{
+document.getElementById('buttons1').src=("./assets/images/paw_print.png");
+};
 
 
 
