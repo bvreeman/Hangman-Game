@@ -8,6 +8,10 @@ header h1 {
     text-shadow: 2px 2px #646464
 }
 
+.word {
+    font-size: 48px;
+}
+
 body { 
     background-image: url(../images/table.jpeg);
     background-position: center;

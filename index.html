@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
     <title>Hangman Game</title>
 </head>
 <body>
@@ -40,7 +37,9 @@
                                 <div class="col-md-8 col-xs-12">
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12">
-                                                <h2>Click a letter to begin the game!</h2>
+                                                <h2>Your Word</h2>
+                                                <div id = "word"></div>
+                                                <button id="reset"></button>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -65,12 +64,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-xs-12" style="padding: 10px">
-                                    <h2>Your Word</h2>
-                                    <div id = "Word"></div>
+                                    <h2>Letters Guessed</h2>
+                                    <div id="guessedLetters"></div>
                                 </div>
                                 <div class="col-md-6 col-xs-12" style="padding: 10px">
                                     <h2>Guesses Remaining</h2>
-                                    <p id="myGuesses"></p>
+                                    <p id="mylives"></p>
                                 </div>
                                 </div>
                             </div>
@@ -80,6 +79,8 @@
                 </div>
             </div>
         </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
     <script src="./assets/javascript/game.js"></script>
     </div>
 </body>
