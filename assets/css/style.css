@@ -29,6 +29,10 @@ body {
     padding: 20px;
 }
 
+.btn-reset {
+    margin-top: 20px;
+}
+
 .row main1 {
     display: flex;
     justify-content: space-between;
@@ -51,7 +55,7 @@ p {
     color: darkcyan;
   }
 
-  #buttons1 {
+  /* #buttons1 {
     padding-top: 20px;
     display: flex;
     justify-content: center;
@@ -68,7 +72,7 @@ p {
     display: flex;
     justify-content: center;
 
-  }
+  } */
 
 /* .btn-letter {
     margin: 10px;

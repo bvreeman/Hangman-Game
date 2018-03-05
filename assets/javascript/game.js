@@ -35,40 +35,39 @@ function correctGuess(guess){
     for(let i = 0; i < eventLocations.length; i++){
         dashWordLength[eventLocations[i]]=guess;
     }
+    
     document.querySelector('#word').innerHTML=dashWordLength.join(' ')
+
+    // if('#word' === chosenWord) {
+    //     alert("You win!")
+    // }
+
 };
+// document.onkeydown = function(event){
+//     let charsTyped = [];
+//     let charCode = typeof event.which === "number" ? event.which : event.keyCode;
 
-let lives = 10;
-function
-
-// function correctGuess(guess){
-//     const chosenWordLetters = chosenWord.split('');
-//     let eventLocations = [];
-//     for (let i = 0; i < chosenWord.length; i++){
-//         if(chosenWordLetters[i] === guess){
-//             eventLocations.push(i)
-//         }else{
-//             chosenWordLetters
-//         }
-//     }
-
-document.getElementById("#mylives").innerHTML=;
-
-let correct = true;
-
-if(!correct){
-    let guessedLetters = document.getElementById("guessedLetters");
-    guessedLetters.appendChild(chosenWordLetters); 
-    lives--;
-}
-
-// function printDashWordLength(){
-// 	for (var i = 0; i < dashWordLength.length; i++){
-// 	let word = document.getElementById("word");
-// 	var chosenWordLetters = document.createTextNode(dashWordLength[i]);
-// 	word.appendChild(chosenWordLetters);
-// 	}
+//     if (charCode) {
+//         charsTyped.push(String.fromCharCode(charCode));
 // }
+
+// };
+
+let keysPressed = ["Your Letters"];
+document.onkeydown = function(event){
+    let key_press = String.fromCharCode(event.keyCode);
+    let key_code = event.keyCode;
+    keysPressed.push(key_press);
+    function register(){
+        let printThis = "";
+        for(let i = 0; i < keysPressed.length; i++){
+            printThis += ""+keysPressed[i];
+        }
+        return printThis;
+    }
+    document.getElementById('lettersguessed').innerHTML= register();
+
+};
 
 //Reset
 
@@ -89,6 +88,7 @@ $('#reset').on('click', reset);
 
 
   // Show lives
+//   let lives = 10;
 //   comments = function () {
 //     showLives.innerHTML = "You have " + lives + " lives";
 //     if (lives < 1) {
