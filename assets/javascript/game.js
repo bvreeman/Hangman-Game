@@ -43,30 +43,16 @@ function correctGuess(guess){
     // }
 
 };
-// document.onkeydown = function(event){
-//     let charsTyped = [];
-//     let charCode = typeof event.which === "number" ? event.which : event.keyCode;
 
-//     if (charCode) {
-//         charsTyped.push(String.fromCharCode(charCode));
-// }
 
-// };
-
-let keysPressed = ["Your Letters"];
+let keysPressed = [""];
 document.onkeydown = function(event){
     let key_press = String.fromCharCode(event.keyCode);
     let key_code = event.keyCode;
     keysPressed.push(key_press);
-    function register(){
-        let printThis = "";
-        for(let i = 0; i < keysPressed.length; i++){
-            printThis += ""+keysPressed[i];
-        }
-        return printThis;
-    }
-    document.getElementById('lettersguessed').innerHTML= register();
-
+    document.querySelector("#guessedLetters").innerHTML=(keysPressed).join(" ");
+   console.log(keysPressed);
+   
 };
 
 //Reset
@@ -80,6 +66,8 @@ function reset(){
     document.querySelector('#word').innerHTML=dashWordLength.join(' ');
     }
 
+        $('#guessedLetters').empty();
+        keysPressed.length=0;
 };
 
 $('#reset').on('click', reset);
