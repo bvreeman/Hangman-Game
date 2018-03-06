@@ -1,6 +1,10 @@
 'use strict';
 
-const wordBank = ["emu", "crocodile", "peacock", "camel", "cheetah", "zebra", "puma", "fox", "alpaca"]; 
+const wordBank = ["emu", "crocodile", "peacock", "camel", "cheetah", "zebra", 
+                    "puma", "fox", "alpaca", "bear", "lion", "koala", "kangaroo",
+                    "hyena", "leopard", "orangutan", "seal", "penguin", "puffin",
+                    "dolphin", "shark", "wolf", "deer", "tiger", "rhino", "dinosaur",
+                    "butterfly", "gorilla", "buffalo", "bison", "reindeer", "bat"]; 
 let guessesRemaining = 15;
     document.querySelector('#myLives').innerHTML=(guessesRemaining);
 
@@ -21,7 +25,7 @@ $(document).on('keypress', function(event) {
     if(chosenWord.includes(guess)) {
         correctGuess(guess);
     } 
-    
+
     if (guess) {
         guessesRemaining--;
         document.querySelector('#myLives').innerHTML=guessesRemaining;
