@@ -21,9 +21,19 @@ $(document).on('keypress', function(event) {
     if(chosenWord.includes(guess)) {
         correctGuess(guess);
     } 
+    
+    if (guess) {
+        guessesRemaining--;
+        document.querySelector('#myLives').innerHTML=guessesRemaining;
+        }
+        if (guessesRemaining === 0){
+            alert("You Lose!");
+        }
+        console.log(guessesRemaining);
 });
 
-function correctGuess(guess){
+function correctGuess(guess)
+{
     const chosenWordLetters = chosenWord.split('');
     let eventLocations = [];
     for (let i = 0; i < chosenWord.length; i++){
@@ -34,20 +44,7 @@ function correctGuess(guess){
         if(remainingLetters === 0){
             alert("You Win!");
         }
-        console.log(remainingLetters);
-
-        console.log(guessesRemaining);
     } 
-
-    for (let i = 0; i < chosenWord.length; i++){
-        if (chosenWordLetters[i] !== guess){
-                guessesRemaining--;
-                document.querySelector('#myLives').innerHTML=guessesRemaining;
-            }
-            if (guessesRemaining === 0){
-                alert("You Lose!");
-            }
-    }
 
     for(let i = 0; i < eventLocations.length; i++){
         dashWordLength[eventLocations[i]]=guess;
@@ -84,6 +81,8 @@ function reset(){
         keysPressed.length=0;
         remainingLetters=chosenWord.length;
         guessesRemaining=15;
+        document.querySelector('#myLives').innerHTML=(guessesRemaining);
+
 
 };
 
