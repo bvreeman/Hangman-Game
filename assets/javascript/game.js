@@ -1,6 +1,8 @@
 'use strict';
 
-const wordBank = ["cat", "crocodile", "human", "fish"]; 
+const wordBank = ["emu", "crocodile", "peacock", "camel", "cheetah", "zebra", "puma", "fox", "alpaca"]; 
+let guessesRemaining = 15;
+    document.querySelector('#myLives').innerHTML=(guessesRemaining);
 
 let chosenWord = wordBank [Math.floor((Math.random()*wordBank.length))];
     let chosenWordLength = chosenWord.length;
@@ -10,15 +12,15 @@ let chosenWord = wordBank [Math.floor((Math.random()*wordBank.length))];
     document.querySelector('#word').innerHTML=dashWordLength.join(' ');
 };
 
+let remainingLetters=chosenWord.length;
+
 $(document).on('keypress', function(event) {
     const guess = event.key;
+    // if (!(event.which <= 90 && event.which >= 65)) return;
 
     if(chosenWord.includes(guess)) {
         correctGuess(guess);
-    // } else {
-    //     wrongGuess(guess);
-    }
-
+    } 
 });
 
 function correctGuess(guess){
@@ -27,9 +29,24 @@ function correctGuess(guess){
     for (let i = 0; i < chosenWord.length; i++){
         if(chosenWordLetters[i] === guess){
             eventLocations.push(i)
-        }else{
-            chosenWordLetters
+            remainingLetters--;
+        } 
+        if(remainingLetters === 0){
+            alert("You Win!");
         }
+        console.log(remainingLetters);
+
+        console.log(guessesRemaining);
+    } 
+
+    for (let i = 0; i < chosenWord.length; i++){
+        if (chosenWordLetters[i] !== guess){
+                guessesRemaining--;
+                document.querySelector('#myLives').innerHTML=guessesRemaining;
+            }
+            if (guessesRemaining === 0){
+                alert("You Lose!");
+            }
     }
 
     for(let i = 0; i < eventLocations.length; i++){
@@ -37,10 +54,6 @@ function correctGuess(guess){
     }
     
     document.querySelector('#word').innerHTML=dashWordLength.join(' ')
-
-    // if('#word' === chosenWord) {
-    //     alert("You win!")
-    // }
 
 };
 
@@ -51,9 +64,10 @@ document.onkeydown = function(event){
     let key_code = event.keyCode;
     keysPressed.push(key_press);
     document.querySelector("#guessedLetters").innerHTML=(keysPressed).join(" ");
-   console.log(keysPressed);
+//    console.log(keysPressed);
    
 };
+
 
 //Reset
 
@@ -68,15 +82,16 @@ function reset(){
 
         $('#guessedLetters').empty();
         keysPressed.length=0;
+        remainingLetters=chosenWord.length;
+        guessesRemaining=15;
+
 };
 
 $('#reset').on('click', reset);
 
 // Guesses Remaining section
 
-
-  // Show lives
-//   let lives = 10;
+  
 //   comments = function () {
 //     showLives.innerHTML = "You have " + lives + " lives";
 //     if (lives < 1) {

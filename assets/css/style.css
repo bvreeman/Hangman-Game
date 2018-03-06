@@ -29,8 +29,23 @@ body {
     padding: 20px;
 }
 
-.btn-reset {
+.button {
     margin-top: 20px;
+}
+
+.myWord {
+    font-size: 36px;
+    font-style: bold;
+}
+
+.guessed {
+    font-size: 36px;
+    font-style: bold;
+}
+
+.lives {
+    font-size: 36px;
+    font-style: bold;
 }
 
 .row main1 {
