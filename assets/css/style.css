@@ -70,35 +70,9 @@ p {
     color: darkcyan;
   }
 
-  /* #buttons1 {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-
-  }
-
-  #buttons2 {
-    display: flex;
-    justify-content: center;
-
-  }
-
-  #buttons3 {
-    display: flex;
-    justify-content: center;
-
-  } */
-
-/* .btn-letter {
-    margin: 10px;
+#reset {
+    margin-bottom: 20px;
 }
-
-.btn-toolbar {
-    display: flex;
-    justify-content: center;
-    color: red;
-    padding-top: 10px; */
-/* } */
 
 .center-block {
     clear: both;
