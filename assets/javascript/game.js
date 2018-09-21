@@ -36,7 +36,8 @@ $(document).on('keypress', function(event) {
 
 function correctGuess(guess) {
     const chosenWordLetters = chosenWord.split('');
-     const eventLocations = [];
+    const eventLocations = [];
+
     for (let i = 0; i < chosenWord.length; i++){
         if(chosenWordLetters[i] === guess){
             eventLocations.push(i)
